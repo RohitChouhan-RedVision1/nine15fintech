@@ -62,7 +62,7 @@ export default function AboutSection() {
                                                 <p>Tailored plans to meet your unique financial needs and goals.</p>
                                             </div>
                                         </div>
-                                        <div className="about-contact-box wow fadeInUp" data-wow-delay="0.6s">
+                                        {/* <div className="about-contact-box wow fadeInUp" data-wow-delay="0.6s">
                                             <div className="icon-box">
                                                 <Image 
                                                     src="/images/icon-phone-white.svg" 
@@ -75,10 +75,10 @@ export default function AboutSection() {
                                             <div className="about-contact-content">
                                                 <p><a href="tel:658456975">{mainData?.mobile}</a></p>
                                             </div>
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
-                                <div className="about-author-box wow fadeInUp" data-aos="fade-up" data-aos-anchor-placement="bottom" >
+                                {/* <div className="about-author-box wow fadeInUp" data-aos="fade-up" data-aos-anchor-placement="bottom" >
                                     <div className="about-info-box">
                                         <figure className="image-anime">
                                             <Image 
@@ -102,7 +102,7 @@ export default function AboutSection() {
                                             <li>24/7 support</li>
                                         </ul>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>

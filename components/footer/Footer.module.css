@@ -161,6 +161,7 @@ footer.mainFooter {
     color: var(--white-color);
     margin: 0;
     opacity: 80%;
+    align-items: center;
 }
 
 .footerMenu ul {

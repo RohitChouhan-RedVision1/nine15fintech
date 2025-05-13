@@ -138,15 +138,15 @@ export default function ContactUs() {
                             <textarea name="message" value={formData.message} onChange={handleChange} placeholder="Message" className={styles.textarea} required></textarea>
 
                             {/* CAPTCHA */}
-                            <div className="flex items-center space-x-4 my-4">
+                           
+                            <input type="text" value={userCaptcha} onChange={(e) => setUserCaptcha(e.target.value)} placeholder="Enter Captcha" className={styles.input} required />
+                             <div className="flex items-center space-x-4 my-4 w-1/2">
                                 <div className={`bg-[var(--rv-secondary)] p-2 rounded-sm w-1/2`} >{captcha}</div>
                                 <button type="button" onClick={refreshCaptcha} className="btn-default btn-highlighted">Refresh</button>
                             </div>
-                            <input type="text" value={userCaptcha} onChange={(e) => setUserCaptcha(e.target.value)} placeholder="Enter Captcha" className={styles.input} required />
-
                             <button
                                 type="submit"
-                                className="btn-default btn-highlighted"
+                                className="btn-default btn-highlighted w-1/2"
                                 disabled={loading}
                             >
                                 {loading ? "Sending..." : "Send Message"}

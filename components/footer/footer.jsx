@@ -187,44 +187,11 @@ const Footer = () => {
                         </div>
                     </div>
                 <div className={styles.footerCopyright}>
-                    <div class="grid grid-cols-1  md:grid-cols-5 align-center">
-                        <div class="col-span-2">
+                
+                        
                             <div className={styles.footerCopyrightText}>
                                 <Link target="_blank" href="https://www.redvisiontechnologies.com/" className="hover:underline me-4 md:me-6"><p>Designed & Developed by REDVision global technology</p></Link>
                             </div>
-                        </div>
-                        {/* <div class="col-span-3">
-                            <div class="footer-menu">
-                                <ul>
-                                    {mainData?.facebook && (
-                                        <Link target="_blank" href={mainData?.facebook}>
-                                            Facebook
-                                        </Link>
-                                    )}
-                                    {mainData?.instagram && (
-                                        <Link target="_blank" href={mainData?.instagram}>
-                                            Instagram
-                                        </Link>
-                                    )}
-                                    {mainData?.linkedin && (
-                                        <Link target="_blank" href={mainData?.linkedin}>
-                                            Linkedin
-                                        </Link>
-                                    )}
-                                    {mainData?.twitter && (
-                                        <Link target="_blank" href={mainData?.twitter}>
-                                            Twitter
-                                        </Link>
-                                    )}
-                                    {mainData?.youtube && (
-                                        <Link target="_blank" href={mainData?.youtube}>
-                                            YouTube
-                                        </Link>
-                                    )}
-                                </ul>
-                            </div>
-                        </div> */}
-                    </div>
                 </div>
             </div>
         </footer>

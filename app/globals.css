@@ -304,23 +304,11 @@ body {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--primary-color);
-  padding-left: 34px;
+  /* padding-left: 34px; */
   margin-bottom: 15px;
 }
 
-.section-title h3::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  background: url('/images/icon-sub-heading.svg');
-  background-repeat: no-repeat;
-  background-position: left center;
-  background-size: cover;
-  width: 24px;
-  height: 24px;
-}
+
 
 .section-title h1 {
   font-size: 70px;
