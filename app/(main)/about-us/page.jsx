@@ -35,9 +35,10 @@ export default function AboutUs() {
                 </div>
             </div>
             <AboutSection />
-            <div className="our-approach">
-                <div className="container mx-auto">
-                    <div className="grid grid-cols-2 section-row items-center">
+            <div className="our-approach ">
+                <div className="container mx-auto ">
+                    <div className='py-[60px]'>
+                        <div className="grid grid-cols-2 section-row items-center">
                         <div>
                             <div className="section-title">
                                 <h3 className="wow fadeInUp">our approach</h3>
@@ -108,6 +109,7 @@ export default function AboutUs() {
                                 </div>
                             </div>
                         </div>
+                    </div>
                     </div>
                 </div>
             </div>
