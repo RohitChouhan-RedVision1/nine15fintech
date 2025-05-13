@@ -190,7 +190,7 @@ const Footer = () => {
                 
                         
                             <div className={styles.footerCopyrightText}>
-                                <Link target="_blank" href="https://www.redvisiontechnologies.com/" className="hover:underline me-4 md:me-6"><p>Designed & Developed by REDVision global technology</p></Link>
+                                <Link target="_blank" href="https://www.redvisiontechnologies.com/" className="hover:underline me-4 md:me-6"><p>Designed & Developed by REDVision Global Technologies</p></Link>
                             </div>
                 </div>
             </div>
