@@ -1,0 +1,220 @@
+.ourtestimonial {
+    padding: 100px 0;
+    background: url(/images/testimonial-bg-img.svg) no-repeat;
+    background-color: var(--dark-color);
+    background-position: center center;
+    background-size: auto;
+}
+
+.testimonialcontent {
+    margin-right: 40px;
+}
+
+.testimonialsliderbox {
+    background-color: var(--dark-divider-color);
+    backdrop-filter: blur(20px);
+    padding: 50px 40px;
+    border-radius: 20px;
+}
+
+.testimonialslider {
+    border-bottom: 1px solid var(--dark-divider-color);
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+}
+
+.testimonialslider .swiperwrapper {
+    cursor: none;
+}
+
+.testimonialheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.customerlogo img {
+    width: 100%;
+    max-width: 170px;
+}
+
+.testimonialquotes {
+    margin-left: 20px;
+}
+
+.testimonialquotes img {
+    width: 100%;
+    max-width: 40px;
+}
+
+.testimonialbody {
+    margin-bottom: 40px;
+}
+
+.testimonialbody p {
+    color: var(--white-color);
+    opacity: 80%;
+    margin: 0;
+}
+
+.testimonialauthor {
+    width: 75%;
+    display: flex;
+    align-items: center;
+}
+
+.testimonialauthor .authorimage {
+    margin-right: 20px;
+}
+
+.testimonialauthor .authorimage figure {
+    display: block;
+    border-radius: 5px;
+}
+
+.testimonialauthor .authorimage img {
+    max-width: 40px;
+    border-radius: 5px;
+}
+
+.testimonialauthor .authorcontent {
+    width: calc(100% - 60px);
+}
+
+.testimonialauthor .authorcontent h3 {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: capitalize;
+    color: var(--white-color);
+    padding-right: 20px;
+}
+
+.testimonialauthor .authorcontent h3 span {
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: var(--white-color);
+    opacity: 80%;
+    margin: 0;
+}
+
+.testimonialslider .testimonialpagination {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: right;
+    z-index: 1;
+    background-color: aqua;
+}
+
+.testimonialslider .testimonialpagination .swiperpaginationbullet {
+    position: relative;
+    height: 12px;
+    width: 12px;
+    background-color: aquamarine;
+    margin: 0 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.testimonialslider .testimonialpagination .swiperpaginationbullet:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 0;
+    width: 0;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+.testimonialslider .testimonialpagination .swiperpaginationbulletactive {
+    background: var(--accent-color);
+}
+
+.testimonialslider .testimonialpagination .swiperpaginationbulletactive:before {
+    height: 24px;
+    width: 24px;
+    border: 1px solid var(--accent-color);
+}
+
+.customerratingboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 40px;
+}
+
+.customerratingbox {
+    width: calc(33.33% - 26.67px);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid var(--dark-divider-color);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.customerratingimage {
+    margin-right: 10px;
+}
+
+.customerratingimage img {
+    width: 100%;
+    max-width: 40px;
+}
+
+.customerratingcontent p {
+    color: var(--white-color);
+    text-transform: capitalize;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.customerratingcounter {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.customerratingcounter h3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--white-color);
+}
+
+.customerratingstarbox {
+    text-align: center;
+}
+
+.customerratingstar i {
+    font-size: 12px;
+    color: var(--white-color);
+}
+
+.customerratingcounter p {
+    text-transform: capitalize;
+    text-align: center;
+    color: var(--white-color);
+    margin-right: 10px;
+    margin-bottom: 0;
+}
+
+.customerratingcounter p span {
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.starratingimg img {
+    width: 100%;
+    max-width: 85px;
+}
+
+.customerratingbox.customerratingcontent p {
+    margin: 0;
+}

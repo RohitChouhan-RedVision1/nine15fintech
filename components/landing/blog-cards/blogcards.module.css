@@ -1,0 +1,130 @@
+.ourBlog {
+    padding: 100px 0 70px;
+}
+
+.postItem {
+    align-items: center;
+    gap: 3px;
+    height: calc(100% - 30px);
+    margin-bottom: 30px;
+}
+
+.postFeaturedImage,
+.postItemBody {
+    width: 100%
+}
+
+.postFeaturedImage a {
+    cursor: none;
+}
+
+.postFeaturedImage figure,
+.postFeaturedImage a {
+    display: block;
+    border-radius: 20px;
+}
+
+.postFeaturedImage img {
+    width: 100%;
+    aspect-ratio: 1 / 0.85;
+    object-fit: cover;
+    transition: all 0.4s ease-in-out;
+}
+
+.postItem:hover .postFeaturedImage img {
+    transform: scale(1.1);
+}
+
+.postItemMeta {
+    margin-bottom: 20px;
+}
+
+.postItemMeta ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.postItemMeta ul li {
+    color: var(--text-color);
+    text-transform: capitalize;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.postItemMeta ul li:last-child {
+    margin-right: 0;
+}
+
+.postItemMeta ul li i {
+    color: var(--text-color);
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+.postItemContent {
+    margin-bottom: 20px;
+}
+
+.postItemContent h2 {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+    line-height: 1.4em;
+}
+
+.postItemContent h2 a {
+    color: inherit;
+}
+
+.readmoreBtn {
+    position: relative;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: var(--accent-color);
+    padding-right: 35px;
+    transition: all 0.3s ease-in-out;
+}
+
+.readmoreBtn:hover {
+    color: var(--primary-color);
+}
+
+.readmoreBtn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    right: 0;
+    transform: translateY(-50%);
+    background: url('/images/arrow-accent.svg') no-repeat;
+    background-position: right center;
+    background-size: cover;
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease-in-out;
+}
+
+.readmoreBtn:hover:before {
+    filter: brightness(0) invert(0);
+}
+
+.postItemBtn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    right: 0;
+    transform: translateY(-50%);
+    background: url('/images/arrow-accent.svg') no-repeat;
+    background-position: right center;
+    background-size: cover;
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease-in-out;
+}
+
+.postItemBtn:hover:before {
+    filter: brightness(0) invert(0);
+}

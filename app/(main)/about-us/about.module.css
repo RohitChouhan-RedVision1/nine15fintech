@@ -1,0 +1,106 @@
+.missionVissionItem {
+    background: var(--white-color);
+    border: 1px solid var(--divider-color);
+    border-radius: 20px;
+    height: calc(100% - 30px);
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.missionVissionHeader {
+    position: relative;
+    padding: 40px;
+}
+
+.missionVissionHeader:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: var(--accent-color);
+    z-index: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.missionVissionItem:hover .missionVissionHeader::after {
+    top: auto;
+    bottom: 0;
+    height: 100%;
+}
+
+.missionVissionItem .iconBox {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: var(--accent-color);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.missionVissionItem .iconBox:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: var(--primary-color);
+    z-index: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.missionVissionItem:hover .iconBox:before {
+    top: auto;
+    height: 100%;
+}
+
+.missionVissionItem .iconBox img {
+    position: relative;
+    max-width: 30px;
+    z-index: 1;
+}
+
+.missionVissionContent {
+    position: relative;
+    z-index: 1;
+}
+
+.missionVissionContent h3 {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    transition: all 0.4s ease-in-out;
+}
+
+.missionVissionContent p {
+    margin: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.missionVissionItem:hover .missionVissionContent h3,
+.missionVissionItem:hover .missionVissionContent p {
+    color: var(--white-color);
+}
+
+.missionVissionImage img {
+    width: 100%;
+    aspect-ratio: 1 / 0.59;
+    object-fit: cover;
+    transition: all 0.4s ease-in-out;
+}
+
+.missionVissionItem:hover .missionVissionImage img {
+    transform: scale(1.1);
+}

@@ -1,0 +1,84 @@
+.featuresContainer {
+    width: 100%;
+    /* min-height: 70vh; */
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    gap: 60px;
+    padding: 60px 0px;
+}
+
+.gridBackground {
+    position: absolute;
+    bottom: 20%;
+    left: 0;
+    width:30rem;
+    height: 54rem;
+    background-image: url('/images/Clip path group.svg');
+    background-size: contain;
+    background-position: bottom;
+    z-index: 1;
+    background-repeat: no-repeat;
+
+}
+
+.textContent {
+    max-width: 40rem;
+    z-index: 1;
+}
+
+.knowMoreButton {
+    background-color: var(--rv-primary);
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.cardsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    z-index: 1;
+}
+
+.card {
+    background-color: var(--rv-secondary);
+    padding: 1.4rem;
+    border-radius: 30px;
+}
+
+.cardIcon {
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .featuresContainer {
+        flex-direction: column;
+        min-height: 100vh;
+        padding: 2rem 1rem;
+    }
+
+    .textContent {
+        max-width: 100%;
+        text-align: left;
+    }
+
+    .cardsContainer {
+        align-items: start;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+
+    .heading {
+        font-size: 2rem;
+    }
+    .gridBackground {
+        display: none;
+    }
+}
