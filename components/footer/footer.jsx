@@ -73,8 +73,8 @@ const Footer = () => {
     return (
         <footer className={styles.mainFooter}>
             <div class="container mx-auto">
-                <div class="grid grid-cols-6">
-                    <div class="col-span-3">
+                <div class="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-6">
+                    <div class="col-span-1 md:col-span-3">
                         <div className={styles.footerNewsletterBox}>
                             <Image
                                 src={"/logo.png"}
@@ -83,7 +83,7 @@ const Footer = () => {
                                 height={150}
                                 className="rounded"
                             />
-                            <p className="mb-6 text-gray-100 py-4">Our journey began with a simple promise: to empower every individual in India to achieve their financial goals and protect what matters most. We know that life's uncertainties can be overwhelming, but with the right guidance and support, you can navigate them successfully.</p>
+                            <p className="mb-6 text-gray-100 py-4">Our journey began with a simple promise: to empower every individual in India to achieve their financial goals and protect what matters most. We know that life&apos;s uncertainties can be overwhelming, but with the right guidance and support, you can navigate them successfully.</p>
                             {/* <div className={styles.footerNewsletterTitle}>
                                 <h3>Don&apos;t missed subscribed!</h3>
                             </div>
@@ -149,7 +149,10 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    <div className="col-span-7">
+                    
+                </div>
+
+                <div className="col-span-7">
                         <div className={styles.footerCtaBox}>
                             <div className={styles.footerLogo}>
                                 <Image src={"/images/amfi-logo.jpg"} width={80} height={80} alt="amfi" className="rounded" />
@@ -183,9 +186,8 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-                </div>
                 <div className={styles.footerCopyright}>
-                    <div class="grid grid-cols-5 align-center">
+                    <div class="grid grid-cols-1  md:grid-cols-5 align-center">
                         <div class="col-span-2">
                             <div className={styles.footerCopyrightText}>
                                 <Link target="_blank" href="https://www.redvisiontechnologies.com/" className="hover:underline me-4 md:me-6"><p>Designed & Developed by REDVision global technology</p></Link>

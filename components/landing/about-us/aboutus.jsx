@@ -65,7 +65,7 @@ export default function AboutSection() {
                                         <div className="about-contact-box wow fadeInUp" data-wow-delay="0.6s">
                                             <div className="icon-box">
                                                 <Image 
-                                                    src="/images/icon-phone.svg" 
+                                                    src="/images/icon-phone-white.svg" 
                                                     alt="Phone Icon" 
                                                     width={40} 
                                                     height={40} 

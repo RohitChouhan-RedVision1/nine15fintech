@@ -105,7 +105,7 @@ const LoginPage = () => {
               Every Investment <br /> A Step Closer to Your <u>Dreams</u>
             </span>
           </h1>
-          <h2 className="text-2xl text-center font-bold mt-4 uppercase">Together, let's create the life you deserve.</h2>
+          <h2 className="text-2xl text-center font-bold mt-4 uppercase">Together, let&apos;s create the life you deserve.</h2>
           <p className="mt-5 text-center text-gray-500">Don’t have an account?</p>
           <Link href="/contact-us" className="text-center mt-1 text-black underline">
             Create account →

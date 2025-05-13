@@ -60,7 +60,7 @@ const MutualFunds = () => {
         {/* Description */}
         <div className="mb-8">
           <p className="text-gray-700">
-            Whether you're looking to grow your wealth, save taxes, or build a retirement corpus, our curated mutual fund solutions offer flexibility, transparency, and expert fund management to help you succeed in your investment journey.
+            Whether you&apos;re looking to grow your wealth, save taxes, or build a retirement corpus, our curated mutual fund solutions offer flexibility, transparency, and expert fund management to help you succeed in your investment journey.
           </p>
         </div>
 
@@ -125,7 +125,7 @@ const MutualFunds = () => {
         {/* Conclusion and CTA */}
         <div className="text-center mt-8">
           <p className="text-gray-700 mb-4">
-            Take control of your financial future with smart mutual fund investments. Whether you're new to investing or a seasoned pro, Contango Asset offers the right mix of funds to help you meet your goals.
+            Take control of your financial future with smart mutual fund investments. Whether you&apos;re new to investing or a seasoned pro, Contango Asset offers the right mix of funds to help you meet your goals.
           </p>
           <Link
                         href="/contact-us"
