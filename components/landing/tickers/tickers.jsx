@@ -14,6 +14,7 @@ const Tickers = () => {
     const fetchData = async () => {
         try {
             const response = await axios.get(`${process.env.NEXT_PUBLIC_DATA_API}/api/open-apis/tickers?apikey=${process.env.NEXT_PUBLIC_API_KEY}`);
+            console.log(response.data.data)
             if (response.status === 200) {
                 const filtered = response.data.data.filter((item) =>
                     allowedIndices.includes(item.indexName)

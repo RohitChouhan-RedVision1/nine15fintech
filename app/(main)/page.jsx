@@ -31,6 +31,7 @@ import "aos/dist/aos.css";
 import SplitType from 'split-type';
 import FeaturesSection from "@/components/landing/featuresSection/featuresSection";
 import SubscribCard from "@/components/landing/subscribcard";
+import Calculator from "@/components/landing/calculator/calculator";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -96,6 +97,7 @@ export default function Page({ children }) {
                 {/* <FaqSection />
                 <Testimonials />
                 <OurPosts /> */}
+                <Calculator/>
                 <SubscribCard />
                 
                 <ContactUs/>
