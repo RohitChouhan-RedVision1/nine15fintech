@@ -6,10 +6,10 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import axios from "axios";
 
-const Navbar = () => {
+const Navbar = ({services}) => {
   const path = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [services, setServices] = useState([]);
+
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -35,28 +35,6 @@ const Navbar = () => {
   const toggletools = () => {
     setShowTools((prev) => !prev);
   };
-
-  const fetchServices = async () => {
-    try {
-      const response = await axios.get("/api/services");
-      if (response.status === 200) {
-        if (response.data && Array.isArray(response.data)) {
-          setServices(response.data);
-        } else {
-          console.error("Invalid data format:", response.data);
-          alert("Failed to fetch services. Please try again.");
-        }
-      } else {
-        console.error("Failed to fetch services:", response.data);
-      }
-    } catch (error) {
-      console.error("Error fetching services:", error);
-    }
-  };
-
-  useEffect(() => {
-    fetchServices();
-  }, []);
   return (
     <div>
       <header
@@ -68,7 +46,7 @@ const Navbar = () => {
           <nav>
             <div className="container mx-auto flex flex-wrap items-center justify-between p-2">
               <Link className="navbar-brand" href="/">
-                <Image src="/logo.png" alt="Logo" width={80} height={100} />
+                <Image src="/logo.png" alt="Logo" width={150} height={100} />
               </Link>
               <div className="main-menu" id="navbar-dropdown">
                 <div className="nav-menu-wrapper">
@@ -146,7 +124,7 @@ const Navbar = () => {
                                                 </li> */}
                         <li>
                           <Link href="/tools/calculators" className="block">
-                            Financial Calculators
+                            Financial calculators
                           </Link>
                         </li>
                         <li>
@@ -154,25 +132,25 @@ const Navbar = () => {
                             href="/tools/financial-health"
                             className="block"
                           >
-                            Financial Health
+                            Financial health
                           </Link>
                         </li>
                         <li>
                           <Link href="/tools/risk-profile" className="block">
-                            Risk Profile
+                            Risk profile
                           </Link>
                         </li>
-                        <li>
+                        {/* <li>
                           <Link
                             href="/tools/pay-premium-online"
                             className="block"
                           >
                             Pay Premium Online
                           </Link>
-                        </li>
+                        </li> */}
                         <li>
                           <Link href="/tools/useful-links" className="block">
-                            Useful Links
+                            Useful links
                           </Link>
                         </li>
                       </ul>
@@ -291,9 +269,9 @@ const Navbar = () => {
                           Financial Health
                         </Link>
                        
-                        <Link href="/tools/pay-premium-online">
+                        {/* <Link href="/tools/pay-premium-online">
                           Pay Premium Online
-                        </Link>
+                        </Link> */}
                          <Link href="/tools/useful-links">Useful Links</Link>
                       </div>
                     )}
@@ -323,13 +301,13 @@ const Navbar = () => {
                       className="text-[var(--rv-secondary)]"
                       href="/about-us"
                     >
-                      About Us
+                      About us
                     </Link>
                     <Link
                       className="text-[var(--rv-secondary)]"
                       href="/contact-us"
                     >
-                      Contact Us
+                      Contact us
                     </Link>
                     <Link className="text-[var(--rv-secondary)]" href="/login">
                       Login

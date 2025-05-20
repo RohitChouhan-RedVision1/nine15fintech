@@ -22,7 +22,7 @@ export default function Page() {
                  <div className="items-center">
                    <div className="page-header-box">
                      <h1 className="text-anime-style-2" data-cursor="-opaque">
-                       Financial Calculators
+                       Financial calculators
                      </h1>
                      <Breadcrumb>
                        <BreadcrumbList className="text-white">
@@ -35,7 +35,7 @@ export default function Page() {
                          </BreadcrumbItem>
                          <BreadcrumbSeparator />
                          <BreadcrumbItem>
-                           <BreadcrumbPage>Financial Calculators</BreadcrumbPage>
+                           <BreadcrumbPage>Financial calculators</BreadcrumbPage>
                          </BreadcrumbItem>
                        </BreadcrumbList>
                      </Breadcrumb>
@@ -75,12 +75,12 @@ export default function Page() {
             <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5">
               {calculators.map((item, index) => (
                 <Link href={item?.route} key={index}>
-                  <div className="px-2 bg-[var(--rv-primary)]  h-14  flex  gap-4 rounded items-center shadow-md group">
+                  <div className="px-2 bg-[var(--rv-primary)]  h-14  flex  gap-4 rounded items-center text-center shadow-md group">
                     <div>
                       <Image src={item?.image} alt="" width={20} height={20} />
                     </div>
                     <div>
-                      <p className="font-bold text-white text-md text-center group-hover:text-[#F3F3E0]">
+                      <p className="font-bold text-white text-md text-center group-hover:text-[#F3F3E0] mb-0">
                         {item?.title}
                       </p>
                     </div>
@@ -97,7 +97,7 @@ export default function Page() {
                       <Image src={item?.image} alt="" width={20} height={20} />
                     </div>
                     <div>
-                      <p className="font-bold text-white text-md group-hover:[#F3F3E0]">
+                      <p className="font-bold text-white text-md group-hover:[#F3F3E0] mb-0">
                         {item?.title}
                       </p>
                     </div>

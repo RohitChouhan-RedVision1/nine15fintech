@@ -13,7 +13,7 @@ const HeroSection = () => {
                     <div>
                         <div className={styles.heroContent}>
                             <div className="section-title dark-section">
-                                <h3 className="text-anime-style-1">Welcome to Financial</h3>
+                                <h3 className="text-anime-style-1">Welcome to NINE15</h3>
                                 <h1 className={`${styles.textAnimeStyle} text-anime-style-2`} data-cursor="-opaque">
                                     <span className='text-[var(--rv-secondary)]'>Empowering</span> your financial success journey
                                 </h1>
@@ -23,7 +23,7 @@ const HeroSection = () => {
                             </div>
                             <div className={styles.heroContentBody} data-aos="fade-up" data-aos-anchor-placement="bottom" >
                                 <div className={styles.heroBtn}>
-                                    <Link href="/contact" className="btn-default">Get Started</Link>
+                                    <Link href="/contact-us" className="btn-default">Get started</Link>
                                 </div>
                                     {/* <div className={styles.heroIntroductionVideo}>
                                         <div className={styles.videoPlayButton}>
@@ -34,7 +34,7 @@ const HeroSection = () => {
                                         </div>
                                     </div> */}
                             </div>
-                            <div className={styles.heroContentFooter} data-aos="fade-up" data-aos-anchor-placement="bottom" >
+                            {/* <div className={styles.heroContentFooter} data-aos="fade-up" data-aos-anchor-placement="bottom" >
                                 <h2 className="wow fadeInUp" data-wow-delay="0.6s">We&apos;re working with:</h2>
                                 <div className={styles.heroClientSlider}>
                                     <Swiper
@@ -56,7 +56,7 @@ const HeroSection = () => {
                                         ))}
                                     </Swiper>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                     <div>
@@ -67,7 +67,7 @@ const HeroSection = () => {
                                 </figure>
                             </div>
                             <div className={styles.companyExperience}>
-                                <h3><span className="counter">25</span>+</h3>
+                                <h3><span className="counter">10</span>+</h3>
                                 <p>Years of experience in finance</p>
                             </div>
                         </div>

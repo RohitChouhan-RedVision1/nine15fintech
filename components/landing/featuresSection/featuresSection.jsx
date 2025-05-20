@@ -10,25 +10,25 @@ export default function FeaturesSection() {
 
     const features = [
         {
-            title: "Portfolio Analysis",
+            title: "Portfolio analysis",
             icon: "/images/features/portfolio-analysis.svg",
             description: "Gain deep insights into your investment portfolio with detailed analytics, performance tracking, and risk assessment to optimize your returns."
         },
         {
-            title: "Invest Online",
+            title: "Invest online",
             icon: "/images/features/invest-online.svg",
-            description: "Seamlessly invest in a wide range of mutual funds, stocks, and other financial products online with just a few clicks."
+            description: "Seamlessly invest in a wide range of mutual funds  with just a few clicks."
         },
         {
-            title: "Goal Tracker",
+            title: "Goal tracker",
             icon: "/images/features/goal-tracker.svg",
             description: "Set and monitor your financial goals, such as retirement or education savings, and stay on track with personalized recommendations."
         },
-        {
-            title: "Research",
-            icon: "/images/features/track-your-fund.svg",
-            description: "Access in-depth research reports, market trends, and fund performance data to make well-informed investment decisions."
-        },
+        // {
+        //     title: "Research",
+        //     icon: "/images/features/track-your-fund.svg",
+        //     description: "Access in-depth research reports, market trends, and fund performance data to make well-informed investment decisions."
+        // },
     ];
 
     return (
@@ -46,7 +46,7 @@ export default function FeaturesSection() {
                         href="/contact-us"
                         className="btn-default btn-highlighted "
                       >
-                        Know More
+                        Know more
                       </Link>
 
                     <Image
@@ -54,7 +54,7 @@ export default function FeaturesSection() {
                                 alt={"mobile"}
                                 width={300}
                                 height={100}
-                                className={"md:ml-20"}
+                                className={""}
                             />
                 </div>
                 <div className={styles.cardsContainer}>

@@ -5,11 +5,11 @@ import Image from "next/image";
 import SectionHeading from "../sectionHeading";
 import { Button } from "@/components/ui/button";
 import axios from "axios";
+import HCaptcha from "@hcaptcha/react-hcaptcha";
 
 export default function ContactUs() {
     const [sitedata, setSiteData] = useState("");
-    const [captcha, setCaptcha] = useState("");
-    const [userCaptcha, setUserCaptcha] = useState("");
+      const [hcaptchaToken, setHcaptchaToken] = useState("");
     const [formData, setFormData] = useState({
         username: "",
         mobile: "",
@@ -21,7 +21,6 @@ export default function ContactUs() {
     const [submitted, setSubmitted] = useState(false);
 
     useEffect(() => {
-        refreshCaptcha();
         fetchdata()
     }, []);
 
@@ -33,11 +32,6 @@ export default function ContactUs() {
         }
     };
 
-    const refreshCaptcha = () => {
-        const randomString = Math.random().toString(36).substring(2, 8).toUpperCase();
-        setCaptcha(randomString);
-        setUserCaptcha("");
-    };
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -47,11 +41,10 @@ export default function ContactUs() {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        if (userCaptcha.trim().toUpperCase() !== captcha.trim().toUpperCase()) {
-            alert("Captcha doesn't match. Please try again.");
-            refreshCaptcha();
-            return;
-        }
+        if (!hcaptchaToken) {
+      alert("Please complete the captcha verification.");
+      return;
+    }
 
         setLoading(true);
 
@@ -83,8 +76,6 @@ export default function ContactUs() {
                     subject: "",
                     message: "",
                 });
-                setUserCaptcha("");
-                refreshCaptcha();
             } else {
                 alert("Submission failed. Try again.");
             }
@@ -97,11 +88,11 @@ export default function ContactUs() {
     };
 
     return (
-        <div className="max-w-screen-xl mx-auto py-[30px] md:py-[60px]">
+        <div className="container mx-auto py-[30px] md:py-[60px]">
             <div className={`${styles.consultationContainer} grid grid-cols-1 md:grid-cols-2`}>
                 <div className={styles.imageContainer}>
                     <Image
-                        src="/images/contact-women.webp"
+                        src="/images/contact-us-img.png"
                         alt="Person working at desk"
                         width={600}
                         height={400}
@@ -113,8 +104,8 @@ export default function ContactUs() {
                     <div className="section-title dark-section">
                 <h3 className="wow fadeInUp">contact us</h3>
                 <h2 className="text-anime-style-2" data-cursor="-opaque">
-                  Get in Touch{" "}
-                  <span className="text-[var(--rv-secondary)]">with Us</span>
+                  Get in touch{" "}
+                  <span className="text-[var(--rv-secondary)]">with us</span>
                 </h2>
                 <p className="wow fadeInUp" data-wow-delay="0.2s">
                   Have questions or need assistance? Reach out to us today!
@@ -128,28 +119,31 @@ export default function ContactUs() {
                     ) : (
                         <form className={styles.form} onSubmit={handleSubmit}>
                             <div className={styles.inputGroup}>
-                                <input type="text" name="username" value={formData.username} onChange={handleChange} placeholder="Name" className={styles.input} required />
-                                <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email" className={styles.input} required />
+                                <input type="text" name="username" value={formData.username} onChange={handleChange} placeholder="Full name" className={styles.input} required />
                             </div>
                             <div className={styles.inputGroup}>
-                                <input type="tel" name="mobile" value={formData.mobile} onChange={handleChange} placeholder="Phone" className={styles.input} required />
-                                <input type="text" name="subject" value={formData.subject} onChange={handleChange} placeholder="Subject" className={styles.input} />
+                                <input type="tel" name="mobile" value={formData.mobile} onChange={handleChange} placeholder="Phone no" className={styles.input} required />
                             </div>
+                            <div className={styles.inputGroup}>
+                                <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="E-mail address" className={styles.input} required />
+                            </div>
+                            
                             <textarea name="message" value={formData.message} onChange={handleChange} placeholder="Message" className={styles.textarea} required></textarea>
 
                             {/* CAPTCHA */}
                            
-                            <input type="text" value={userCaptcha} onChange={(e) => setUserCaptcha(e.target.value)} placeholder="Enter Captcha" className={styles.input} required />
-                             <div className="flex items-center space-x-4 my-4 w-1/2">
-                                <div className={`bg-[var(--rv-secondary)] p-2 rounded-sm w-1/2`} >{captcha}</div>
-                                <button type="button" onClick={refreshCaptcha} className="btn-default btn-highlighted">Refresh</button>
-                            </div>
+                            <div className="">
+        <HCaptcha
+          sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+          onVerify={setHcaptchaToken}
+        />
+      </div>
                             <button
                                 type="submit"
-                                className="btn-default btn-highlighted w-1/2"
+                                className="btn-default  w-1/2"
                                 disabled={loading}
                             >
-                                {loading ? "Sending..." : "Send Message"}
+                                {loading ? "Sending..." : "Send message"}
                             </button>
                         </form>
                     )}

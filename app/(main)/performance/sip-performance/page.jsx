@@ -302,7 +302,7 @@ export default function Page() {
                 <div className="items-center">
                   <div className="page-header-box">
                     <h1 className="text-anime-style-2" data-cursor="-opaque">
-                      SIP  Perfomance
+                      SIP  performance
                     </h1>
                     <Breadcrumb>
                       <BreadcrumbList className="text-white">
@@ -315,7 +315,7 @@ export default function Page() {
                         </BreadcrumbItem>
                         <BreadcrumbSeparator />
                         <BreadcrumbItem>
-                          <BreadcrumbPage>SIP  Perfomance</BreadcrumbPage>
+                          <BreadcrumbPage>SIP  perfomance</BreadcrumbPage>
                         </BreadcrumbItem>
                       </BreadcrumbList>
                     </Breadcrumb>

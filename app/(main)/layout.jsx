@@ -1,10 +1,14 @@
 import Footer from "@/components/footer/footer";
 import Navbar from "@/components/header/header";
 import WebPopup from "@/components/webpopup";
-import AnimatedCursor from "react-animated-cursor"
+import { getArn, getServiceData, getSiteData, getSocialMedia } from "@/lib/functions";
 // import UpdatePopup from "@/components/updatepopup";
 
 export default async function Layout({ children }) {
+    const services=await getServiceData();
+    const siteData=await getSiteData();
+    const socialMedia=await getSocialMedia();
+    const arnData=await getArn()
     return (
         <div>
             {/* <AnimatedCursor
@@ -30,9 +34,9 @@ export default async function Layout({ children }) {
                     backgroundColor: 'var(--accent-color)'
                 }}
             /> */}
-            <Navbar />
+            <Navbar services={services} />
             {children}
-            <Footer />
+            <Footer services={services} siteData={siteData} socialMedia={socialMedia} arnData={arnData} />
             {/* <UpdatePopup /> */}
             <WebPopup />
         </div>

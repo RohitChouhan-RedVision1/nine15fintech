@@ -33,7 +33,7 @@ const UsefulLinksPage = () => {
                                    <div className="items-center">
                                      <div className="page-header-box">
                                        <h1 className="text-anime-style-2" data-cursor="-opaque">
-                                         Useful Links
+                                         Useful links
                                        </h1>
                                        <Breadcrumb>
                                          <BreadcrumbList className="text-white">
@@ -42,7 +42,7 @@ const UsefulLinksPage = () => {
                                            </BreadcrumbItem>
                                            <BreadcrumbSeparator />
                                            <BreadcrumbItem>
-                                             <BreadcrumbPage>Useful Links</BreadcrumbPage>
+                                             <BreadcrumbPage>Useful links</BreadcrumbPage>
                                            </BreadcrumbItem>
                                          </BreadcrumbList>
                                        </Breadcrumb>
@@ -52,7 +52,7 @@ const UsefulLinksPage = () => {
                                </div>
     <div className="">
       <div className="container mx-auto md:px-20 px-4 pt-5 py-[100]">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-[60px]">
           {usefulLink.map((link, index) => (
             <Link href={link.link} key={index} legacyBehavior>
               <a

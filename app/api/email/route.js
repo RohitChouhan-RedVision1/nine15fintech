@@ -3,7 +3,7 @@ import nodemailer from 'nodemailer';
 export async function POST(request) {
     const { to, subject, text, html } = await request.json()
     const transporter = nodemailer.createTransport({
-        host: 'smtp.zoho.in',
+        host: 'smtp.gmail.com',
         port: 465,
         secure: true,
         auth: {

@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@hcaptcha/react-hcaptcha": "^1.11.0",
+    "@hcaptcha/react-hcaptcha": "^1.12.0",
     "@hookform/resolvers": "^3.9.0",
     "@radix-ui/react-accordion": "^1.2.0",
     "@radix-ui/react-checkbox": "^1.1.1",
@@ -42,6 +42,7 @@
     "jspdf-autotable": "^3.8.3",
     "lucide-react": "^0.445.0",
     "mongoose": "^8.6.4",
+    "motion": "^12.12.1",
     "multer": "^1.4.5-lts.1",
     "next": "14.2.13",
     "next-auth": "^4.24.10",

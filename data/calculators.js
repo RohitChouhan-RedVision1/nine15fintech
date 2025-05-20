@@ -1,11 +1,11 @@
 export const calculators = [
     {
-        title: "Car Planning Calculator",
+        title: "Car planning calculator",
         route: "/tools/calculators/car-plan",
         image: "/images/calculators/car.svg"
     },
     {
-        title: "SIP Calculator",
+        title: "SIP calculator",
         route: "/tools/calculators/sip-calculator",
         image: "/images/calculators/calculator-form.svg"
     },
@@ -20,32 +20,32 @@ export const calculators = [
     //     image: "/images/calculators/calculator-form.svg"
     // },
     {
-        title: "Delay Planning Calculator",
+        title: "Delay planning calculator",
         route: "/tools/calculators/delay-plan",
         image: "/images/calculators/delay.svg"
     },
     {
-        title: "House Planning Calculator",
+        title: "House planning calculator",
         route: "/tools/calculators/house-plan",
         image: "/images/calculators/home.svg"
     },
     {
-        title: "Education Planning Calculator",
+        title: "Education planning calculator",
         route: "/tools/calculators/education-plan",
         image: "/images/calculators/mortarboard.svg"
     },
     {
-        title: "Life Insurance Calculator",
+        title: "Life insurance calculator",
         route: "/tools/calculators/life-insurance-plan",
          image: "/images/calculators/life-insurance.svg"
     },
     {
-        title: "Lumpsum Calculator",
+        title: "Lumpsum calculator",
         route: "/tools/calculators/lumpsum-calculator",
         image: "/images/calculators/calculator-form.svg"
     },
     {
-        title: "Marriage Planning Calculator",
+        title: "Marriage planning calculator",
         route: "/tools/calculators/marriage-plan",
         image: "/images/calculators/wedding-rings.svg"
     },
@@ -60,12 +60,12 @@ export const calculators = [
     //     image: "/images/calculators/up.svg"
     // },
     {
-        title: "SWP Calculator",
+        title: "SWP calculator",
         route: "/tools/calculators/swp-calculator",
         image: "/images/calculators/calculator-form.svg"
     },
     {
-        title: "Vacation Planning Calculator", route: "/tools/calculators/vacation-plan",
+        title: "Vacation planning calculator", route: "/tools/calculators/vacation-plan",
         image: "/images/calculators/sun-umbrella.svg"
     },
 ];
@@ -73,27 +73,27 @@ export const calculators = [
 export const performance = [
     {
         link: "/performance/sip-performance",
-        title: "SIP Performace",
+        title: "SIP performance",
         image: "/images/calculators/performance.svg"
     },
     {
         link: "/performance/stp-performance",
-        title: "STP Performace",
+        title: "STP performance",
         image: "/images/calculators/performance.svg"
     },
     {
         link: "/performance/swp-performance",
-        title: "SWP Performace",
+        title: "SWP performance",
         image: "/images/calculators/performance.svg"
     },
     {
         link: "/performance/fund-performance",
-        title: "Fund Performace",
+        title: "Fund performance",
         image: "/images/calculators/performance.svg"
     },
     {
         link: "/performance/scheme-performance",
-        title: "Scheme Performace",
+        title: "Scheme performance",
         image: "/images/calculators/performance.svg"
     },
 ];

@@ -13,12 +13,12 @@ import {
   BreadcrumbPage,
 } from "@/components/ui/breadcrumb";
 import Link from "next/link";
+import HCaptcha from "@hcaptcha/react-hcaptcha";
+import axios from "axios";
 
 const ContactUs = () => {
   const [mainData, setMainData] = useState("");
-  const [services, setServices] = useState([]);
-  const [captcha, setCaptcha] = useState("");
-  const [userCaptcha, setUserCaptcha] = useState("");
+  const [hcaptchaToken, setHcaptchaToken] = useState("");
   const [formData, setFormData] = useState({
     username: "",
     mobile: "",
@@ -28,17 +28,7 @@ const ContactUs = () => {
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  useEffect(() => {
-    refreshCaptcha();
-  }, []);
-  const refreshCaptcha = () => {
-    const randomString = Math.random()
-      .toString(36)
-      .substring(2, 8)
-      .toUpperCase();
-    setCaptcha(randomString);
-    setUserCaptcha("");
-  };
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -48,9 +38,8 @@ const ContactUs = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (userCaptcha.trim().toUpperCase() !== captcha.trim().toUpperCase()) {
-      alert("Captcha doesn't match. Please try again.");
-      refreshCaptcha();
+     if (!hcaptchaToken) {
+      alert("Please complete the captcha verification.");
       return;
     }
 
@@ -66,7 +55,7 @@ const ContactUs = () => {
     };
 
     const senderData = {
-      to: mainData?.email || "support@alpha72wealth.com",
+      to: mainData?.email ,
       subject: "New Enquiry Received",
       text: `New Enquiry from Contact Us:\n\nUser Name: ${formData.username}\nEmail: ${formData.email}\nMobile: ${formData.mobile}\nMessage: ${formData.message}\n\n${emailContent}`,
     };
@@ -85,8 +74,6 @@ const ContactUs = () => {
           email: "",
           message: "",
         });
-        setUserCaptcha("");
-        refreshCaptcha();
       } else {
         alert("Something went wrong.");
       }
@@ -145,7 +132,7 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-      <div className={styles.pageContactUs}>
+      {/* <div className={styles.pageContactUs}>
         <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-4">
             <div>
@@ -241,7 +228,7 @@ const ContactUs = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className={`${styles.contactFormSection}`}>
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 items-center">
@@ -249,7 +236,7 @@ const ContactUs = () => {
               <div className={styles.contactFormImg}>
                 <figure className="image-anime">
                   <Image
-                    src="/images/contact-us-img.jpg"
+                    src="/images/contact-us.png "
                     alt="Contact Us"
                     width={600}
                     height={400}
@@ -261,8 +248,8 @@ const ContactUs = () => {
               <div className="section-title">
                 <h3 className="wow fadeInUp">contact us</h3>
                 <h2 className="text-anime-style-2" data-cursor="-opaque">
-                  Get in Touch{" "}
-                  <span className="text-[var(--rv-primary)]">with Us</span>
+                  Get in touch{" "}
+                  <span className="text-[var(--rv-primary)]">with us</span>
                 </h2>
                 <p className="wow fadeInUp" data-wow-delay="0.2s">
                   Have questions or need assistance? Reach out to us today!
@@ -326,37 +313,19 @@ const ContactUs = () => {
                       required
                     ></textarea>
                   </div>
-                  <div className="form-group col-md-12 mb-2">
-                    <input
-                      type="text"
-                      name="captcha"
-                      placeholder="Enter Captcha"
-                      value={userCaptcha}
-                      onChange={(e) => setUserCaptcha(e.target.value)}
-                      className={`${styles.formControl}`}
-                      required
-                    />
-                    <div className="flex items-center space-x-4 mt-2">
-                      <div className="bg-gray-100 px-4 py-2 rounded text-lg font-semibold tracking-widest">
-                        {captcha}
-                      </div>
-                      <button
-                        type="button"
-                        onClick={refreshCaptcha}
-                        className="btn-default btn-highlighted"
-                      >
-                        Refresh
-                      </button>
-                    </div>
-                    
-                  </div>
+                  <div className="mb-3">
+        <HCaptcha
+          sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+          onVerify={setHcaptchaToken}
+        />
+      </div>
                   <div className="col-md-12">
                     <button
                       type="submit"
                       className="btn-default"
                       disabled={loading}
                     >
-                      {loading ? "Sending..." : "Send Message"}
+                      {loading ? "Sending..." : "Send message"}
                     </button>
                     {submitted && (
                       <p className="text-green-600 mt-4">
@@ -370,7 +339,7 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-      <div className={styles.googleMap}>
+      {/* <div className={styles.googleMap}>
         <div className={styles.googleMapIframe}>
           <iframe
             src={mainData?.iframe}
@@ -379,7 +348,7 @@ const ContactUs = () => {
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

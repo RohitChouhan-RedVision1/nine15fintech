@@ -288,7 +288,7 @@ export default function Page() {
                                   <div className="items-center">
                                     <div className="page-header-box">
                                       <h1 className="text-anime-style-2" data-cursor="-opaque">
-                                        SWP  Perfomance
+                                        SWP  performance
                                       </h1>
                                       <Breadcrumb>
                                         <BreadcrumbList className="text-white">
@@ -301,7 +301,7 @@ export default function Page() {
                                           </BreadcrumbItem>
                                           <BreadcrumbSeparator />
                                           <BreadcrumbItem>
-                                            <BreadcrumbPage>SWP  Perfomance</BreadcrumbPage>
+                                            <BreadcrumbPage>SWP  performance</BreadcrumbPage>
                                           </BreadcrumbItem>
                                         </BreadcrumbList>
                                       </Breadcrumb>

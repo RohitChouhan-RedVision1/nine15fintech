@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "../public/fonts/georgia/font.css";
 
 body {
   font-family: var(--default-font);
@@ -139,7 +140,7 @@ body {
   font-size: 18px;
   font-weight: 700;
   line-height: 1em;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   background: var(--accent-color);
   color: var(--rv-primary);
   border-radius: 100px;
@@ -156,7 +157,7 @@ body {
   font-size: 18px;
   font-weight: 700;
   line-height: 1em;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   background: var(--accent-color);
   color: var(--rv-primary);
   border-radius: 100px;
@@ -437,7 +438,7 @@ header.main-header .header-sticky.active {
   padding: 15px 20px !important;
   color: var(--white-color);
   opacity: 80%;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   transition: all 0.3s ease-in-out;
 }
 
@@ -3685,7 +3686,7 @@ footer.main-footer {
     --divider-color: #F3F3F3;
     --dark-divider-color: #FFFFFF1A;
     --error-color: rgb(230, 87, 87);
-    --default-font: "DM Sans", sans-serif;
+    --default-font: "georgia", sans-serif;
   }
 
   .dark {

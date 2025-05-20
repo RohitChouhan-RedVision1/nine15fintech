@@ -10,6 +10,7 @@ import {
     BreadcrumbPage,
 } from "@/components/ui/breadcrumb";
 import styles from './about.module.css'
+import Link from 'next/link';
 
 export default function AboutUs() {
     return (
@@ -47,7 +48,7 @@ export default function AboutUs() {
                         </div>
                         <div>
                             <div className="section-btn wow fadeInUp" data-wow-delay="0.2s">
-                                <a href="contact.html" className="btn-default">Contact now</a>
+                                <Link href="/contact-us" className="btn-default">Contact now</Link>
                             </div>
                         </div>
                     </div>
@@ -61,12 +62,12 @@ export default function AboutUs() {
                                     </div>
                                     <div className={styles.missionVissionContent}>
                                         <h3>our mission</h3>
-                                        <p>Empowering clients with tailored financial strategies for sustainable growth.</p>
+                                        <p>To revolutionize how young India invests – easy, fast, and full of potential.</p>
                                     </div>
                                 </div>
-                                <div className={styles.missionVissionImageclass}>
+                                <div className={`${styles.missionVissionImageclass} bg-[var(--rv-secondary)]`}>
                                     <figure className="image-anime">
-                                        <Image src="/images/our-value-img.jpg" alt="Our Value Image" layout='responsive' width={300} height={200} />
+                                        <Image src="/images/mission.png" alt="Our Value Image" layout='responsive' width={200} height={200} />
                                     </figure>
                                 </div>
                             </div>
@@ -80,12 +81,12 @@ export default function AboutUs() {
                                     </div>
                                     <div className={styles.missionVissionContent}>
                                         <h3>our vision</h3>
-                                        <p>Empowering clients with tailored financial strategies for sustainable growth.</p>
+                                        <p> To spark a financial movement where smart investing is second nature to the next generation and to attain financial freedom.</p>
                                     </div>
                                 </div>
-                                <div className={styles.missionVissionImageclass}>
+                                <div className={`${styles.missionVissionImageclass} bg-[var(--rv-secondary)]`}>
                                     <figure className="image-anime">
-                                        <Image src="/images/our-value-img.jpg" alt="Our Value Image" layout='responsive' width={300} height={200} />
+                                        <Image src="/images/vision 1.png" alt="Our Value Image" layout='responsive' width={300} height={200} />
                                     </figure>
                                 </div>
                             </div>
@@ -99,12 +100,12 @@ export default function AboutUs() {
                                     </div>
                                     <div className={styles.missionVissionContent}>
                                         <h3>our value</h3>
-                                        <p>Empowering clients with tailored financial strategies for sustainable growth.</p>
+                                        <p> Driven by trust, built on transparency, powered by research.</p>
                                     </div>
                                 </div>
-                                <div className={styles.missionVissionImageclass}>
+                                <div className={`${styles.missionVissionImageclass} bg-[var(--rv-secondary)]`}>
                                     <figure className="image-anime">
-                                        <Image src="/images/our-value-img.jpg" alt="Our Value Image" layout='responsive' width={300} height={200} />
+                                        <Image src="/images/values.png" alt="Our Value Image" layout='responsive' width={300} height={200} />
                                     </figure>
                                 </div>
                             </div>

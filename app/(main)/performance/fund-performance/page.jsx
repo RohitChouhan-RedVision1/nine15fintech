@@ -125,7 +125,7 @@ export default function MarketUpdate() {
                                         <div className="items-center">
                                           <div className="page-header-box">
                                             <h1 className="text-anime-style-2" data-cursor="-opaque">
-                                              Fund  Perfomance
+                                              Fund  performance
                                             </h1>
                                             <Breadcrumb>
                                               <BreadcrumbList className="text-white">
@@ -138,7 +138,7 @@ export default function MarketUpdate() {
                                                 </BreadcrumbItem>
                                                 <BreadcrumbSeparator />
                                                 <BreadcrumbItem>
-                                                  <BreadcrumbPage>Fund  Perfomance</BreadcrumbPage>
+                                                  <BreadcrumbPage>Fund  performance</BreadcrumbPage>
                                                 </BreadcrumbItem>
                                               </BreadcrumbList>
                                             </Breadcrumb>

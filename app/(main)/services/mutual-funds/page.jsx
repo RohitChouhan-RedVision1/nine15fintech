@@ -25,7 +25,7 @@ const MutualFunds = () => {
                 <div className="items-center">
                   <div className="page-header-box">
                     <h1 className="text-anime-style-2" data-cursor="-opaque">
-                      Mutual Funds
+                      Mutual funds
                     </h1>
                     <Breadcrumb>
                       <BreadcrumbList className="text-white">
@@ -38,7 +38,7 @@ const MutualFunds = () => {
                         </BreadcrumbItem>
                         <BreadcrumbSeparator />
                         <BreadcrumbItem>
-                          <BreadcrumbPage>Mutual Funds</BreadcrumbPage>
+                          <BreadcrumbPage>Mutual funds</BreadcrumbPage>
                         </BreadcrumbItem>
                       </BreadcrumbList>
                     </Breadcrumb>

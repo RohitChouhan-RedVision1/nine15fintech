@@ -292,7 +292,7 @@ export default function Page() {
                                   <div className="items-center">
                                     <div className="page-header-box">
                                       <h1 className="text-anime-style-2" data-cursor="-opaque">
-                                        Scheme  Perfomance
+                                        Scheme  performance
                                       </h1>
                                       <Breadcrumb>
                                         <BreadcrumbList className="text-white">
@@ -301,11 +301,11 @@ export default function Page() {
                                           </BreadcrumbItem>
                                           <BreadcrumbSeparator />
                                            <BreadcrumbItem>
-                                            <BreadcrumbLink href="/tools/calculators">Scheme Performance</BreadcrumbLink>
+                                            <BreadcrumbLink href="/tools/calculators">Scheme performance</BreadcrumbLink>
                                           </BreadcrumbItem>
                                           <BreadcrumbSeparator />
                                           <BreadcrumbItem>
-                                            <BreadcrumbPage>STP  Perfomance</BreadcrumbPage>
+                                            <BreadcrumbPage>STP  performance</BreadcrumbPage>
                                           </BreadcrumbItem>
                                         </BreadcrumbList>
                                       </Breadcrumb>

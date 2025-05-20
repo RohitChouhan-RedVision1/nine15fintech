@@ -124,7 +124,7 @@
 
 .contactFormImg img {
     width: 100%;
-    aspect-ratio: 1 / 1.25;
+    /* aspect-ratio: 1 / 1.25; */
     object-fit: cover;
     border-radius: 20px;
 }
@@ -135,7 +135,7 @@
     line-height: 1.4em;
     color: var(--rv-primary);
     background: var(--white-color);
-    border: none;
+    border: 1px solid var(--rv-primary);
     border-radius: 10px;
     padding: 18px 20px;
     box-shadow: none;

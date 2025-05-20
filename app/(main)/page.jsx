@@ -5,7 +5,7 @@ import { Suspense } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
 import FinancialTool from "@/components/landing/tools/financialtools";
 import AboutUs from "@/components/landing/about-us/aboutus";
-import SubscribCard from "@/components/landing/subscribcard";
+
 import Tickers from "@/components/landing/tickers/tickers";
 import EmiCalculator from "@/components/landing/emicalculatort";
 import WhyChouseUs from "@/components/landing/why-chouse-us/whychouseus";
@@ -30,6 +30,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import SplitType from 'split-type';
 import FeaturesSection from "@/components/landing/featuresSection/featuresSection";
+import SubscribCard from "@/components/landing/subscribcard";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -95,7 +96,8 @@ export default function Page({ children }) {
                 {/* <FaqSection />
                 <Testimonials />
                 <OurPosts /> */}
-                {/* <SubscribCard /> */}
+                <SubscribCard />
+                
                 <ContactUs/>
                 
             </main>

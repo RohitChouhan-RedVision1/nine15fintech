@@ -64,7 +64,7 @@ footer.mainFooter {
 .footerLinks h3 {
     font-size: 20px;
     font-weight: 600;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     color: var(--white-color);
     margin-bottom: 25px;
 }
@@ -76,7 +76,7 @@ footer.mainFooter {
 }
 
 .footerLinks ul li {
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     color: var(--white-color);
     margin-bottom: 10px;
     opacity: 80%;
@@ -154,6 +154,8 @@ footer.mainFooter {
 }
 
 .footerCopyright {
+    display: flex;
+    justify-content: space-between;
     padding: 60px 0;
 }
 
